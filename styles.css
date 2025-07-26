@@ -1,3 +1,20 @@
-.box {
-    border: 1px solid black;
+/*Make body a vertical flex container*/
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+/*Main body horizontal flex container*/
+main{
+    display: flex;
+    flex-direction: row;
+    flex: auto;
+}
+
+/*article*/
+article {
+    flex: 2;
+    overflow-y: auto;
 }
