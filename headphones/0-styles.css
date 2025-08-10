@@ -1,0 +1,141 @@
+:root {
+  --color-primary:  #ff6565;
+  --color-white: #ffffff;
+  --text-color: var(--color-white);
+}
+
+*, ::before, ::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+   
+}
+
+header{
+  background-image: url(images/headphones_hero_1.jpg);
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: var(--text-color);
+}
+
+button {   
+    border: none;
+    border-radius: 100px;
+    background-color: var(--color-primary);
+    color: var(--text-color);
+    font-weight: bold;
+    padding: 1rem 2rem; 
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+a {
+     color: var(--text-color);
+    font-weight: bold;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-primary);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.logo {
+  height: 31.2px;
+  width: 161px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+    position: relative;
+}
+
+/* Hide checkbox */
+.menu-toggle {
+    display: none;
+}
+
+/* Menu icon for mobile */
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 1.5rem;
+    left: 0;
+}
+
+.nav-menu {
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.hero {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     margin-top: 17%;
+     text-align: center;
+    
+}
+
+.hero-title {
+    margin-bottom: 2rem;
+}
+
+.hero-title h1, .hero-title h2 {
+   font-weight: bold;
+} 
+
+.hero-title h1 {
+    font-size: 32px;
+}
+
+.hero-text {
+    margin-top: 2.5rem;
+    max-width: 637px;
+    line-height: 26px;
+}
+
+@media screen and (max-width: 480px) {
+    nav {
+        justify-content: center;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-menu {
+       display: none;
+       flex-direction: column;
+       gap: 2rem;
+       text-align: center;
+    }
+
+     .menu-toggle:checked + .menu-icon + .logo + .nav-menu {
+        display: flex;
+    }
+
+    .container{
+        padding: 0 2rem;
+    }
+}
